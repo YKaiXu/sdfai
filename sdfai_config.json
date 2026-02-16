@@ -1,0 +1,44 @@
+{
+  "im": {
+    "feishu": {
+      "app_id": "cli_a90fc7b03c38dcb0",
+      "app_secret": "vy0sf4w8N4IWY956chcYAhUEhkD5RIZz",
+      "enabled": true
+    }
+  },
+  "llm": {
+    "xunfei-kimi": {
+      "model_name": "Kimi-K2-5",
+      "model_id": "xopkimik25",
+      "app_id": "b75e516d",
+      "api_key": "a943e63a5fbded921da23a3328d5bfeb",
+      "api_secret": "MmRkNWZhYWEwZTk5NGMyNzA3NmExZTAz",
+      "ws_url": "wss://maas-api.cn-huabei-1.xf-yun.com/v1.1/chat",
+      "enabled": true,
+      "priority": 100
+    },
+    "supervisor": {
+      "model_name": "Qwen3-1.7B",
+      "model_id": "xop3qwen1b7",
+      "app_id": "980d8a95",
+      "api_key": "f83bd2c5b262e94b45cb9f58bd304533",
+      "api_secret": "ZDRhN2U5YWZlY2M4NzQ3ZDRmODE0OTAx",
+      "enabled": true,
+      "role": "supervisor_and_fallback"
+    }
+  },
+  "sdf": {
+    "host": "sdf.org",
+    "port": 22,
+    "username": "yupeng",
+    "password": "ykx130729",
+    "enabled": true,
+    "room": "lobby"
+  },
+  "primary_llm": "xunfei-kimi",
+  "fallback_llms": ["supervisor"],
+  "hallucination_supervision": {
+    "enabled": true,
+    "async_mode": true
+  }
+}
